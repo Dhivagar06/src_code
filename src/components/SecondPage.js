@@ -12,11 +12,11 @@ const SecondPage = ({ selectedButtons }) => {
     if (selectedButtons.length > 0) {
       // Simulated data structure: [{ name, age, course, mark, total }]
       const simulatedData = selectedButtons.map((buttonData) => ({
-        name: `Name ${buttonData}`,
-        age: 20 + buttonData,
-        course: `Course ${buttonData}`,
-        mark: Math.floor(Math.random() * 100) + 1,
-        total: 100,
+        name: `${buttonData}`,
+        age: 20 + Math.floor(Math.random() * 10), // Unique age for each button
+        course: "React",
+        mark: Math.floor(Math.random() * 41) + 60, 
+        total: Math.floor(Math.random() * 100) + 80,
       }));
       setData(simulatedData);
     } else {
